@@ -1,0 +1,11 @@
+Pelikulak
+1;31 dias;2000;Estados Unidos;145;2001-03-23;Suspense;1103731.95;0
+2;El hijo de la novia;2001;España Argentina;124;2001-11-23;Drama;7230415.69;0
+3;El señor de los anillos. La comunidad del anillo.;2001;Nueva Zelanda;160;2001-12-19;Fantasia;3.126331497E7;1
+4;Mar adentro;2004;España;95;2004-09-03;Drama;1.951796862E7;0
+5;Casablanca;1942;Estados Unidos;98;1946-12-19;Romantica;318310.24;0
+6;El bola;2000;España;88;2000-10-20;Drama;2998626.52;0
+7;Torrente, el brazo tonto de la ley;1998;España;97;1998-03-13;Comedia;1.090255995E7;0
+8;Solas;1998;España;101;1999-03-05;Drama;3675149.47;0
+9;Poseidon;2005;Estados Unidos;105;2005-06-25;Aventura;0.0;0
+10;a;1980;a;11;1990-10-10;Suspense;10.0;0

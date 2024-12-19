@@ -8,25 +8,34 @@ import java.util.InputMismatchException;
 
 public class Menua {
 
+	// Scanner klasea erabiltzen da erabiltzailearen sarrera jasotzeko
 	private static Scanner scanner = new Scanner(System.in);
+	// Fitxategi objektua deklaratzen da
 	private static File fitxategia;
+	// Pelikula objektuak gordetzeko ArrayList-a sortzen da
 	private static ArrayList<Pelikula> pelikula = new ArrayList<>();
 
 	public static void main(String[] args) throws IOException {
 
+		// Fitxategi bat sortzen da erabiltzailearen sarrera erabiliz
 		fitxategia = FitxategiKudeatzailea.fitxategiaSortu(scanner);
+		// Pelikulak kargatzen dira fitxategitik ArrayList-era
 		FitxategiKudeatzailea.pelikulaKargatu(pelikula);
 
+		// Fitxategia behar bezala sortu bada, menua hasiko da
 		if (fitxategia != null) {
 			menuaHasi();
 		} else {
+			// Fitxategia sortzerakoan errorea gertatu bada, mezua erakusten da
 			System.out.println("Errorea fitxategia sortzean. Ezin da jarraitu.");
 		}
 	}
 
+	// Menu nagusia martxan jartzen duen metodoa
 	private static void menuaHasi() throws IOException {
 
 		while (true) {
+			// Menua pantailaratzen da
 			System.out.println("\nMenua:");
 			System.out.println("1. Fitxategia bete taulako datuekin");
 			System.out.println("2. Fitxategia hustu");
@@ -42,9 +51,11 @@ public class Menua {
 
 			int aukera = -1;
 			try {
+				// Erabiltzailearen aukera jasotzen da
 				aukera = scanner.nextInt();
 				scanner.nextLine();
 
+				// Aukera bakoitzaren arabera metodo desberdinak deitzen dira
 				switch (aukera) {
 				case 1:
 					FitxategiEragiketak.fitxategiaBete(fitxategia, pelikula);
@@ -74,11 +85,12 @@ public class Menua {
 					FitxategiEragiketak.erregistroaAldatu(fitxategia, scanner);
 					break;
 				default:
+					// Aukera okerra eman bada, mezua erakusten da
 					System.out.println("Aukera okerra.");
 				}
 
 			} catch (InputMismatchException e) {
-				// Errorea gertatzen bada input okerra dela eta, mezua erakusten da
+				// Input-ak zenbakia izan behar duela ohartarazteko mezua
 				System.out.println("Errorea: zenbaki bat sartu behar duzu.");
 				scanner.nextLine(); // Inputa garbitzen du errorearen ondoren
 			}
